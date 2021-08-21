@@ -2,7 +2,8 @@ import React from 'react';
 
 import Score from '../score/Score';
 
-function Title() {
+function Title(props) {
+  const { score, highScore } = props;
   return (
     <div>
       <h1>Solarsystem Memory Game</h1>
@@ -10,7 +11,7 @@ function Title() {
         Get points by clicking on an image but don&#39;t click on any picture
         more than once!
       </p>
-      <Score />
+      <Score score={score} highScore={highScore} />
     </div>
   );
 }

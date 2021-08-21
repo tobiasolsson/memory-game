@@ -1,10 +1,11 @@
 import React from 'react';
 
-function Score() {
+function Score(props) {
+  const { score, highScore } = props;
   return (
     <ul>
-      <li>Score: 0</li>
-      <li>Best Score: 0</li>
+      <li>Score: {score}</li>
+      <li>Best Score: {highScore}</li>
     </ul>
   );
 }

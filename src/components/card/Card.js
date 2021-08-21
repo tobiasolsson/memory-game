@@ -29,7 +29,7 @@ function Card(props) {
       className={styles.card}
       role="button"
       tabIndex={0}
-      onClick={handleClick}
+      onClick={(e) => handleClick(e, planet)}
       onKeyDown={handleClick}
     >
       <img src={plantes[planet]} alt={planet} />

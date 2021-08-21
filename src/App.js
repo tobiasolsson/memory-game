@@ -66,24 +66,32 @@ function App() {
     neptune: false,
   });
 
-  function handleClick(e) {
+  function resetGame() {
+    setScore(0);
+    Object.keys(cards).forEach((key) => {
+      setCards((prev) => ({ ...prev, [key]: false }));
+    });
+  }
+
+  function handleClick(e, planet) {
     // check if card has been clicked already:
     // if it has, setHighScore(score)
     // and reset all images clicked staus
     // else setScore(+1) and set img to clicked
-    console.log('clicked', e.target);
-    setScore((prev) => prev + 1);
-    console.log('score', score);
+    if (!cards[planet]) {
+      setCards((prev) => ({ ...prev, [planet]: true }));
+      setScore((prev) => prev + 1);
+    } else if (score > highScore) {
+      setHighScore(score);
+      resetGame();
+    } else if (score <= highScore) {
+      resetGame();
+    }
   }
   return (
     <div>
       <Title score={score} highScore={highScore} />
-      <Gameboard
-        cards={cards}
-        handleClick={handleClick}
-        setHighScore={setHighScore}
-        setCards={setCards}
-      />
+      <Gameboard cards={cards} handleClick={handleClick} />
     </div>
   );
 }
