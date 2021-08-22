@@ -1,12 +1,27 @@
 .card {
-  border: 1px solid black;
-  width: 300px;
+  background-color: #020202;
+  width: 275px;
   height: 300px;
   display: inline-block;
   margin: 30px;
+  border-radius: 18px;
+  text-align: center;
+}
+
+.card:hover {
+  box-shadow: rgba(40, 38, 139, 0.89) 0px 22px 70px 4px;
 }
 
 .card img {
+  margin-top: 10px;
   width: 250px;
   height: 250px;
+  border-radius: 18px;
+}
+
+.card p {
+  margin: 0;
+  color: #dfdfdf;
+  text-transform: capitalize;
+  font-weight: 600;
 }

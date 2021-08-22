@@ -33,7 +33,7 @@ function Card(props) {
       onKeyDown={handleClick}
     >
       <img src={plantes[planet]} alt={planet} />
-      {planet}
+      <p>{planet}</p>
     </div>
   );
 }
