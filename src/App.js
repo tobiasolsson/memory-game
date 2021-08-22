@@ -74,10 +74,6 @@ function App() {
   }
 
   function handleClick(e, planet) {
-    // check if card has been clicked already:
-    // if it has, setHighScore(score)
-    // and reset all images clicked staus
-    // else setScore(+1) and set img to clicked
     if (!cards[planet]) {
       setCards((prev) => ({ ...prev, [planet]: true }));
       setScore((prev) => prev + 1);
