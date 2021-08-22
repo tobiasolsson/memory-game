@@ -1,5 +1,5 @@
 import React from 'react';
-
+import styles from './Gameboard.module.css';
 import Card from '../card/Card';
 
 function Gameboard(props) {
@@ -23,7 +23,7 @@ function Gameboard(props) {
   const playableCards = randomKeys.map((item) => (
     <Card handleClick={handleClick} planet={item} />
   ));
-  return <div>{playableCards}</div>;
+  return <div className={styles.gameboard}>{playableCards}</div>;
 }
 
 export default Gameboard;
