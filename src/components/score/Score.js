@@ -5,7 +5,7 @@ function Score(props) {
   return (
     <ul>
       <li>Score: {score}</li>
-      <li>Best Score: {highScore}</li>
+      <li>High Score: {highScore}</li>
     </ul>
   );
 }

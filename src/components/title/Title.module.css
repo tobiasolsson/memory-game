@@ -1,0 +1,29 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'title title title score'
+    'desc desc . score';
+
+  padding: 10px;
+  margin: 0;
+  color: #dfdfdf;
+  background: rgb(21, 21, 21);
+  background: linear-gradient(
+    0deg,
+    rgba(21, 21, 21, 1) 10%,
+    rgba(40, 38, 139, 1) 90%
+  );
+}
+
+.title {
+  grid-area: title;
+}
+.desc {
+  grid-area: desc;
+}
+.score {
+  grid-area: score;
+  text-align: end;
+}
